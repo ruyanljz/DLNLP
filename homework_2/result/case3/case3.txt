@@ -1,0 +1,30 @@
+.../homework_2/em.py:42: RuntimeWarning: invalid value encountered in true_divide
+  gamma = gamma / np.sum(gamma, axis=1, keepdims=True)  # 求解每个数据来自各个子模型的概率
+
+--------------------------------
+**高斯混合模型 真实参数
+      均值 | 标准差 | 模型比例
+女生: 164  |  3  |  0.25
+男生: 176  |  5  |  0.75
+
+**高斯混合模型 初始参数
+      均值 | 标准差 | 模型比例
+女生: 160  |  0.4  |  0.3
+男生: 175  |  0.4  |  0.7
+
+**高斯混合模型 估计参数
+      均值 | 标准差 | 模型比例
+女生: nan  |  nan  |  nan
+男生: nan  |  nan  |  nan
+-------------------------------
+**预测结果
+女生人数: 2000 男生人数: 0
+性别比例(女:男) = 1:0.00
+*准确率: 0.25
+--------------------------------
+Traceback (most recent call last):
+  File ".../homework_2/em.py", line 115, in <module>
+    data1 = np.random.normal(mu[0], sigma[0], int(alpha[0] * len(data)))
+ValueError: cannot convert float NaN to integer
+
+进程已结束,退出代码1
